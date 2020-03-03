@@ -7,31 +7,48 @@ import java.util.Scanner;
  * @author H´P
  */
 public class ejercicio15 {
+    
     public static void main(String[] args) {
         Scanner leer= new Scanner(System.in);
-        System.out.println("Ingrese el numero de obreros: ");
-        int n=leer.nextInt();
-        int horast[]=new int[n],hextra;
-        float pago[]=new float[n],sueldob;
-        System.out.println("Ingrese el pago por hora: ");
-        sueldob=leer.nextInt();
+        int n;
+        System.out.println("Ingrese el numero de vehiculos que ingresaron: ");
+        n=leer.nextInt();
+        int matriculas[]=new int[n];
+        int amarilla=0,rosa=0,roja=0,verde=0,azul=0;
         for(int i=0;i<n;i++){
-            System.out.println("Ingrese las horas de trabajo del obrero "+(i+1)+": ");
-            horast[i]=leer.nextInt();
-            if(horast[i]>40){
-                hextra=horast[i]-40;
-                if(hextra>8){
-                    pago[i]=(float)(hextra-8)*sueldob*3;
-                    pago[i]+=8*2*sueldob;
-                }
-                pago[i]+=40*sueldob;
-            }else
-                pago[i]=horast[i]*sueldob;
-            
+            System.out.println("Ingrese la matricula del vehiculo "+(i+1)+": ");
+            matriculas[i]=leer.nextInt();
+            switch (matriculas[i]%10) {
+                case 1:
+                case 2:
+                    amarilla++;
+                    break;
+                case 3:
+                case 4:
+                    rosa++;
+                    break;
+                case 5:
+                case 6:
+                    roja++;
+                    break;
+                case 7:
+                case 8:
+                    verde++;
+                    break;
+                case 9:
+                case 0:
+                    azul++;
+                    break;
+                default:
+                    break;
+            }
         }
-        
-        for(int i=0;i<n;i++)
-            System.out.println("\nEl sueldo total del obreros "+(i+1)+" es: "+pago[i]);
-        
+        System.out.println("\n\n");
+        System.out.println("Cantidad de autos con calcomanias de color amarrillo: "+amarilla);
+        System.out.println("Cantidad de autos con calcomanias de color rosa: "+rosa);
+        System.out.println("Cantidad de autos con calcomanias de color roja: "+roja);
+        System.out.println("Cantidad de autos con calcomanias de color verde: "+verde);
+        System.out.println("Cantidad de autos con calcomanias de color azul: "+azul);
     }
+    
 }

@@ -8,14 +8,29 @@ import java.util.Scanner;
  */
 public class ejercicio7 {
     public static void main(String[] args) {
+        int n,i=1,cont=0;
         Scanner leer= new Scanner(System.in);
-        float ganancia,inversion;
-        System.out.println("Ingrese el monto inicial de inversion: ");
-        inversion=leer.nextFloat();
-        for(int i=0;i<12;i++){
-            ganancia= (float) (inversion*0.02);
-            inversion+=ganancia;
+        System.out.println("Ingrese un numero: ");
+        n=leer.nextInt();
+        while(n>=i){
+            if(n%i==0){
+                cont++;
+            }
+            i++;
         }
-        System.out.println("La cantidad obtenida es: "+inversion);
+        if(cont==2)
+        System.out.println("\nEs un numero primo");
+        else System.out.println("\nNo es un numero primo");
+       
+        int a=1,b=0;
+        while(a<=n){
+            a=a+b;
+            b=a-b;
+            if(a==n)
+                break;
+        }
+        if(a==n)
+            System.out.println("Es fibonacci");
+        else System.out.println("No es fibonacci");
     }
 }

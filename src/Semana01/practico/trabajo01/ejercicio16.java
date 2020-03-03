@@ -1,6 +1,6 @@
 package Semana01.practico.trabajo01;
 
-import java.util.Scanner;
+import java.util.Scanner; 
 
 /**
  *
@@ -8,22 +8,21 @@ import java.util.Scanner;
  */
 public class ejercicio16 {
     public static void main(String[] args) {
-        Scanner leer = new Scanner(System.in);
-        System.out.println("ingrese un numero: ");
+        Scanner leer= new Scanner(System.in);
+        System.out.println("Ingrese el numero de alumnos: ");
         int n=leer.nextInt();
-        float suma=0;
-        for(int i=1;i<=n;i++){
-            suma+=(float)1/factorial(i);
+        float prom[]=new float[n];
+        for (int i=0;i<n;i++){
+            int suma=0;
+            System.out.println("Ingrese las notas del alumno "+(i+1)+": ");
+            for(int j=0;j<4;j++){
+                suma+=leer.nextInt();      
+            }
+            prom[i]=(float)suma/4;
         }
-        System.out.println("La suma es: "+suma);
+        System.out.println("\n");
+        for(int i=0;i<n;i++){
+            System.out.println("Promedio del alumno "+(i+1)+" es: "+prom[i]);
+        }
     }
-    
-    public static int factorial(int n) {
-        int factor=1;
-        if(n>1)
-           factor=n*factorial(n-1); 
-        
-        return factor;
-    }
- 
 }

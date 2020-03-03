@@ -9,20 +9,23 @@ import java.util.Scanner;
 public class ejercicio10 {
     public static void main(String[] args) {
         Scanner leer= new Scanner(System.in);
-        System.out.println("Ingrese la cantidad de numeros que va ingresar: ");
-        int n=leer.nextInt();
-        int may;
-        int arr[]=new int[n];
-        System.out.println("\nIngrese los numeros: ");
-        for(int i=0;i<n;i++){
-            arr[i]=leer.nextInt();
+        int dias=15,cont=1,tiempo,tiempototal=0,tmayora16=0;
+        float promedio;
+        while(dias>0){
+            System.out.println("Ingrese El tiempo realizado el dia "+cont+": ");
+            tiempo=leer.nextInt();
+            if(tiempo>16)
+                tmayora16++;           
+            tiempototal+=tiempo;
+            cont++;
+            dias--;
         }
-        may=arr[0];
-        for(int i=1;i<n;i++){
-            if(arr[i]>may){
-                may=arr[i];
-            }
+        promedio=(float)tiempototal/15;
+        System.out.println("\ntiempos mayores a 16: "+tmayora16+"\npromedio de tiempos echos: "+promedio);
+        if(promedio<=15||tmayora16==0){
+            System.out.println("\nEl atleta esta apto para la competencia.");
+        }else{
+            System.out.println("\nEl atleta no esta apto para la competencia.");
         }
-        System.out.println("El numero mayor es: "+may);
     }
 }

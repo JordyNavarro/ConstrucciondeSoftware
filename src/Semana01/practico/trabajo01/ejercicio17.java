@@ -9,31 +9,13 @@ import java.util.Scanner;
 public class ejercicio17 {
     public static void main(String[] args) {
         Scanner leer= new Scanner(System.in);
-        System.out.println("Ingrese el numero de alumnos que va registrar: ");
-        int n=leer.nextInt();
-        int op,hombres=0,mujeres=0;
-        String nombres[]=new String[n];
-        for(int i=0;i<n;i++){
-            System.out.println("Ingrese el nombre del alumno "+(i+1)+": ");
-            nombres[i]=leer.next();
-            System.out.println("Elija su sexo:\n1.Hombre\n2.Mujer");
-            op=leer.nextInt();
-            switch(op){
-                case 1:
-                    hombres++;
-                    break;
-                case 2:
-                    mujeres++;
-                    break;
-                default:
-                    System.out.println("Dato incorrecto");
-            }
+        float ganancia,inversion;
+        System.out.println("Ingrese el monto inicial de inversion: ");
+        inversion=leer.nextFloat();
+        for(int i=0;i<12;i++){
+            ganancia= (float) (inversion*0.02);
+            inversion+=ganancia;
         }
-        System.out.println("\nAlumnos:\n");
-        for(int i=0;i<n;i++){
-            System.out.println((i+1)+". "+nombres[i]);
-        }
-        System.out.println("Cantidad de hombres: "+hombres);
-        System.out.println("Cantidad de mujeres: "+mujeres);
+        System.out.println("La cantidad obtenida es: "+inversion);
     }
 }

@@ -9,20 +9,23 @@ import java.util.Scanner;
 public class ejercicio21 {
     public static void main(String[] args) {
         Scanner leer= new Scanner(System.in);
-        int n,ncliente=0,montototal=0;
-        String nombre;
+        int op,costo,cant;
+        float precio,ganancia=0;
         do{
-            System.out.println("1.Realizar venta\n2.Salir\n");
-            n=leer.nextInt();
-            if(n==1){
-                System.out.println("Nombre del cliente: ");
-                nombre=leer.next();
-                System.out.println("Monto de la venta: ");
-                montototal+=leer.nextInt();
-                ncliente++;
+            System.out.println("Elija una opcion:\n1. Registrar una venta\n2. Salir");
+            op=leer.nextInt();
+            if(op==1){
+                System.out.println("Ingrese el precio del articulo: ");
+                costo=leer.nextInt();
+                System.out.println("Ingrese la cantidad de articulos: ");
+                cant=leer.nextInt();
+                precio=(float)costo*cant;
+                ganancia+=precio;
+                System.out.println("El monto de la compra es: "+precio+"\n");
             }
-        }while(n!=2);
-        System.out.println("Total de clientes atendidos: "+ncliente);
-        System.out.println("Monto total de las ventas del dia: "+montototal);
+            if(op==2)
+                break;
+        }while(true);
+        System.out.println("\n\nLa ganancia del dia es: "+ganancia);
     }
 }

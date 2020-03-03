@@ -8,25 +8,22 @@ import java.util.Scanner;
  */
 public class ejercicio5 {
     public static void main(String[] args) {
+        System.out.println("Ingrese la cantidad de numeros primos que desea obtener: ");
         Scanner leer= new Scanner(System.in);
-        int n;
-        System.out.println("Ingrese la cantidad de obreros: ");
-        n=leer.nextInt();
-        System.out.println("\n\n");
-        int horast[]=new int[n];
-        int pago[]=new int[n];
-        for(int i=0;i<n;i++){
-            System.out.println("Ingrese la horas de trabajo del obrero "+(i+1)+": ");
-            horast[i]=leer.nextInt();
-            if(horast[i]<=40){
-                pago[i]=horast[i]*20;
-            }else if(horast[i]>40){
-                pago[i]=(40*20)+((horast[i]-40)*25);
+        int n,cont,cant=0;
+        n= leer.nextInt();
+            
+        for(int i=1;cant<n;i++){
+            cont=0;
+            for(int j=1;j<=i;j++)
+                if(i%j==0)
+                    cont++;
+                
+            if(cont==2){
+                System.out.println(i);
+                cant++;
             }
-        }
-        System.out.println("\n\n");
-        for(int i=0;i<n;i++){
-            System.out.println("El pago del obrero "+(i+1)+" es: "+pago[i]);
+            
         }
     }
 }

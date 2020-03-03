@@ -9,40 +9,24 @@ import java.util.Scanner;
 public class ejercicio22 {
     public static void main(String[] args) {
         Scanner leer= new Scanner(System.in);
-        float X=7400000,Y=360000,interes,interestotal=0,pagomensual,pagototal=0,temp=0;
-        double I=0.01;
-        int mes=1,cont=0;
-        while(X>temp){
-            temp+=Y;
-            cont++;
-        }
-        System.out.println("El numero de pagos necesarios es: "+cont);
-        while(X>0){
-            if(X>Y){
-                interes=(float)I*X;
-                interestotal+=interes;
-                pagomensual=Y+interes;
-                pagototal+=pagomensual;
-                X-=Y;
-                System.out.println("\n\nEl interes aplicado el mes "+mes+" es: "+interes);
-                System.out.println("\nEl pago total del mes es: "+pagomensual);
-                System.out.println("\nEl interes acumulado es: "+interestotal);
-                System.out.println("\nMonto restante por devolver: "+X);
-                mes++;
-            }else{
-                interes=(float)I*X;
-                interestotal+=interes;
-                pagomensual=X+interes;
-                pagototal+=pagomensual;
-                X=0;
-                System.out.println("\n\nEl interes aplicado el mes "+mes+" es: "+interes);
-                System.out.println("\nEl pago total del mes es: "+pagomensual);
-                System.out.println("\nEl interes acumulado es: "+interestotal);
-                System.out.println("\nMonto restante por devolver: "+X);
-                mes++;
+        float ultimoregistro[]=new float[5],peso,promedio[]=new float[5];
+        for(int i=0;i<5;i++){
+            System.out.println("Ingrese el ultimo registro del miembro "+(i+1)+": ");
+            ultimoregistro[i]=leer.nextFloat();
+            peso=0;
+            for(int j=0;j<10;j++){
+                System.out.println("Ingrese el peso registrado en la bascula "+(j+1)+": ");
+                peso+=leer.nextFloat();
             }
-            System.out.println("\n\nEl pago total es: "+pagototal);
+            System.out.println("\n\n");
+            promedio[i]=(float)peso/10;
         }
-        
+        for(int i=0;i<5;i++){
+            if((promedio[i]-ultimoregistro[i])<0){
+                System.out.println("El miembro "+(i+1)+" Bajo de peso");
+            }else{
+                System.out.println("El miembro " + (i + 1) + " Subio de peso");
+            }
+        }    
     }
 }

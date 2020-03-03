@@ -1,26 +1,32 @@
 package Semana01.practico.trabajo01;
 
+import java.util.Scanner;
+
 /**
  *
  * @author H´P
  */
 public class ejercicio13 {
     public static void main(String[] args) {
-        int cant=0;
-        float preprobados;
-        int notas[]= new int[50];
-        System.out.println("Notas:\n");
-        for(int i=0;i<50;i++){
-            notas[i]=aleatorio(10,100);
-            System.out.println(notas[i]);
-            if(notas[i]<70){
-                cant++;
+        Scanner leer= new Scanner(System.in);
+        int n;
+        System.out.println("Ingrese la cantidad de obreros: ");
+        n=leer.nextInt();
+        System.out.println("\n\n");
+        int horast[]=new int[n];
+        int pago[]=new int[n];
+        for(int i=0;i<n;i++){
+            System.out.println("Ingrese la horas de trabajo del obrero "+(i+1)+": ");
+            horast[i]=leer.nextInt();
+            if(horast[i]<=40){
+                pago[i]=horast[i]*20;
+            }else if(horast[i]>40){
+                pago[i]=(40*20)+((horast[i]-40)*25);
             }
         }
-        preprobados=(float)(cant*100/50);
-        System.out.println("\nPorcentaje de reprobados: "+preprobados);
-    }
-    public static int aleatorio(int min,int max) {
-        return (int)((max-min+1)*Math.random()+min);
+        System.out.println("\n\n");
+        for(int i=0;i<n;i++){
+            System.out.println("El pago del obrero "+(i+1)+" es: "+pago[i]);
+        }
     }
 }
