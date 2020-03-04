@@ -1,6 +1,9 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package Semana07.practico;
-
-import java.awt.Color;
 
 /**
  *
@@ -8,15 +11,11 @@ import java.awt.Color;
  */
 public class ejercicio01 extends javax.swing.JFrame {
 
-    int suma,cont;
-    String nota,notas;
-    public ejercicio01() {    
-        suma=0;
-        cont=0;
-        nota=null;
-        notas="Notas:\n";
+    /**
+     * Creates new form ejemplo02
+     */
+    public ejercicio01() {
         initComponents();
-        this.setLocationRelativeTo(this);
     }
 
     /**
@@ -28,33 +27,18 @@ public class ejercicio01 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblNota = new javax.swing.JLabel();
-        btnAgregar = new javax.swing.JButton();
+        lblNumero = new javax.swing.JLabel();
+        txtNumero = new javax.swing.JTextField();
+        btnGenerar = new javax.swing.JButton();
         btnMostrar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        txtANotas = new javax.swing.JTextArea();
-        txtNota = new javax.swing.JTextField();
-        lblmsje = new javax.swing.JLabel();
+        jTextArea1 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setAutoRequestFocus(false);
-        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setFocusCycleRoot(false);
-        setPreferredSize(new java.awt.Dimension(400, 500));
-        setResizable(false);
-        setSize(new java.awt.Dimension(400, 500));
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblNota.setText("Notas:");
-        getContentPane().add(lblNota, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, 52, 20));
+        lblNumero.setText("Numero:");
 
-        btnAgregar.setText("Agregar");
-        btnAgregar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAgregarActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(78, 131, -1, -1));
+        btnGenerar.setText("Generar");
 
         btnMostrar.setText("Mostrar");
         btnMostrar.addActionListener(new java.awt.event.ActionListener() {
@@ -62,76 +46,51 @@ public class ejercicio01 extends javax.swing.JFrame {
                 btnMostrarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnMostrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 131, -1, -1));
 
-        txtANotas.setColumns(20);
-        txtANotas.setRows(5);
-        jScrollPane1.setViewportView(txtANotas);
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(78, 172, 256, 201));
-
-        txtNota.addContainerListener(new java.awt.event.ContainerAdapter() {
-            public void componentRemoved(java.awt.event.ContainerEvent evt) {
-                txtNotaComponentRemoved(evt);
-            }
-        });
-        txtNota.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNotaActionPerformed(evt);
-            }
-        });
-        txtNota.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtNotaKeyTyped(evt);
-            }
-        });
-        getContentPane().add(txtNota, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 50, 110, -1));
-        getContentPane().add(lblmsje, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 80, 120, 20));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(68, 68, 68)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane1)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnGenerar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblNumero, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnMostrar, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(txtNumero, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(63, 63, 63))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblNumero)
+                    .addComponent(txtNumero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(44, 44, 44)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnGenerar)
+                    .addComponent(btnMostrar))
+                .addGap(42, 42, 42)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(71, Short.MAX_VALUE))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
-        nota=txtNota.getText();  
-        try {
-            suma+=Integer.parseInt(txtNota.getText()); 
-            cont++;
-            lblmsje.setText("");
-            notas=notas+nota+"\n";
-            txtANotas.setText(notas);
-        } catch (NumberFormatException e) {
-            lblmsje.setForeground(Color.red);
-            lblmsje.setText("Ingrese una nota");
-        }
-        
-        txtNota.setText("");
-        txtNota.requestFocus();
-        
-    }//GEN-LAST:event_btnAgregarActionPerformed
-
     private void btnMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarActionPerformed
-        txtANotas.setText(notas+"Promedio: "+String.valueOf((double)suma/cont));
-        suma=0;
-        cont=0;
-        nota=null;
-        notas="Notas:\n";
-    }//GEN-LAST:event_btnMostrarActionPerformed
-
-    private void txtNotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNotaActionPerformed
-        
-    }//GEN-LAST:event_txtNotaActionPerformed
-
-    private void txtNotaComponentRemoved(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_txtNotaComponentRemoved
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNotaComponentRemoved
-
-    private void txtNotaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNotaKeyTyped
-        char validar=evt.getKeyChar();
-        if(Character.isLetter(validar)){
-            getToolkit().beep();
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtNotaKeyTyped
+    }//GEN-LAST:event_btnMostrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -150,14 +109,17 @@ public class ejercicio01 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ejemplito.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ejercicio01.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ejemplito.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ejercicio01.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ejemplito.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ejercicio01.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ejemplito.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ejercicio01.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
@@ -169,12 +131,11 @@ public class ejercicio01 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAgregar;
+    private javax.swing.JButton btnGenerar;
     private javax.swing.JButton btnMostrar;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lblNota;
-    private javax.swing.JLabel lblmsje;
-    private javax.swing.JTextArea txtANotas;
-    private javax.swing.JTextField txtNota;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel lblNumero;
+    private javax.swing.JTextField txtNumero;
     // End of variables declaration//GEN-END:variables
 }

@@ -5,18 +5,75 @@
  */
 package Semana07.practico;
 
+import java.awt.Color;
 import java.util.ArrayList;
 
 /**
  *
  * @author H´P
  */
-public class ejercicio04 extends javax.swing.JFrame {
-    int n,acu;
-    ArrayList<Integer>vector= new ArrayList<>();
+
+class Estudiante{
+    int nro;
+    int n1,n2,n3;
+    double prom;
     
-    public ejercicio04(){
-        acu=0;
+    public Estudiante(int nro,int n1,int n2,int n3){
+        this.nro=nro;
+        this.n1=n1;
+        this.n2=n2;
+        this.n3=n3;
+        this.prom=(double)(n1+n2+n3)/3;
+    }
+
+    public int getNro() {
+        return nro;
+    }
+
+    public void setNro(int nro) {
+        this.nro = nro;
+    }
+
+    public int getN1() {
+        return n1;
+    }
+
+    public void setN1(int n1) {
+        this.n1 = n1;
+    }
+
+    public int getN2() {
+        return n2;
+    }
+
+    public void setN2(int n2) {
+        this.n2 = n2;
+    }
+
+    public int getN3() {
+        return n3;
+    }
+
+    public void setN3(int n3) {
+        this.n3 = n3;
+    }
+
+    public double getProm() {
+        return prom;
+    }
+
+    public void setProm(double prom) {
+        this.prom = prom;
+    }
+    
+    
+}
+
+public class ejercicio04 extends javax.swing.JFrame {
+
+    ArrayList<Estudiante>estudiantes=new ArrayList<>();
+    
+    public ejercicio04() {
         initComponents();
         this.setLocationRelativeTo(this);
     }
@@ -30,192 +87,335 @@ public class ejercicio04 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblnum = new javax.swing.JLabel();
-        txtnumero = new javax.swing.JTextField();
-        btngrabar = new javax.swing.JButton();
-        btnmostrar = new javax.swing.JButton();
-        lblvectorinicial = new javax.swing.JLabel();
-        lblvectrofinal = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        txtainicial = new javax.swing.JTextArea();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        txtafinal = new javax.swing.JTextArea();
-        lblimpresion = new javax.swing.JLabel();
-        txtvfinal = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        lblnumorden = new javax.swing.JLabel();
+        txtnum = new javax.swing.JTextField();
+        lblexam1 = new javax.swing.JLabel();
+        lblexam2 = new javax.swing.JLabel();
+        lblexam3 = new javax.swing.JLabel();
+        txtexam1 = new javax.swing.JTextField();
+        txtexam2 = new javax.swing.JTextField();
+        txtexam3 = new javax.swing.JTextField();
+        btnagregar = new javax.swing.JButton();
+        btncalcular = new javax.swing.JButton();
+        lblpromexam3 = new javax.swing.JLabel();
+        lblprommay = new javax.swing.JLabel();
+        lblnestudiante = new javax.swing.JLabel();
+        lblnaprobados = new javax.swing.JLabel();
+        lblndesaprobados = new javax.swing.JLabel();
+        lbldesaprobadosex1 = new javax.swing.JLabel();
+        txtpromexam3 = new javax.swing.JTextField();
+        txtmayprom = new javax.swing.JTextField();
+        txtnestudiante = new javax.swing.JTextField();
+        txtnaprobados = new javax.swing.JTextField();
+        txtndesaprobados = new javax.swing.JTextField();
+        txtndesaprobadosex1 = new javax.swing.JTextField();
+        lblmensj = new javax.swing.JLabel();
+        lblmensj2 = new javax.swing.JLabel();
+
+        jTextField3.setText("jTextField3");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
-        lblnum.setText("Ingresar Numero:");
+        lblnumorden.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblnumorden.setText("Numero de Orden del Estudiante:  ");
 
-        txtnumero.addActionListener(new java.awt.event.ActionListener() {
+        txtnum.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtnum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtnumeroActionPerformed(evt);
+                txtnumActionPerformed(evt);
             }
         });
 
-        btngrabar.setText("Grabar");
-        btngrabar.addActionListener(new java.awt.event.ActionListener() {
+        lblexam1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblexam1.setText("Examen 1");
+
+        lblexam2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblexam2.setText("Examen 2");
+
+        lblexam3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblexam3.setText("Examen 3");
+
+        txtexam1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btngrabarActionPerformed(evt);
+                txtexam1ActionPerformed(evt);
             }
         });
 
-        btnmostrar.setText("Mostrar");
-        btnmostrar.addActionListener(new java.awt.event.ActionListener() {
+        txtexam2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnmostrarActionPerformed(evt);
+                txtexam2ActionPerformed(evt);
             }
         });
 
-        lblvectorinicial.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblvectorinicial.setText("Vector Inicial");
-
-        lblvectrofinal.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblvectrofinal.setText("Vextor Final");
-
-        txtainicial.setColumns(20);
-        txtainicial.setRows(5);
-        jScrollPane1.setViewportView(txtainicial);
-
-        txtafinal.setColumns(20);
-        txtafinal.setRows(5);
-        jScrollPane2.setViewportView(txtafinal);
-
-        lblimpresion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblimpresion.setText("Impresion Final:");
-
-        txtvfinal.addActionListener(new java.awt.event.ActionListener() {
+        txtexam3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtvfinalActionPerformed(evt);
+                txtexam3ActionPerformed(evt);
             }
         });
+
+        btnagregar.setText("Agregar");
+        btnagregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnagregarActionPerformed(evt);
+            }
+        });
+
+        btncalcular.setText("Calcular");
+        btncalcular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btncalcularActionPerformed(evt);
+            }
+        });
+
+        lblpromexam3.setText("Promedio del aula examen 3");
+
+        lblprommay.setText("Mayor promedio");
+
+        lblnestudiante.setText("Numero de Estudiante");
+
+        lblnaprobados.setText("Numero de Aprobados");
+
+        lblndesaprobados.setText("Numero de Desaprobados");
+
+        lbldesaprobadosex1.setText("Numero Desaprobados Examen 1");
+
+        txtpromexam3.setEditable(false);
+
+        txtmayprom.setEditable(false);
+        txtmayprom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtmaypromActionPerformed(evt);
+            }
+        });
+
+        txtnestudiante.setEditable(false);
+
+        txtnaprobados.setEditable(false);
+
+        txtndesaprobados.setEditable(false);
+
+        txtndesaprobadosex1.setEditable(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblvectorinicial, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblvectrofinal, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblexam3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(60, 60, 60)
+                                .addComponent(txtexam3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(lblexam2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(lblexam1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(txtexam1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtexam2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(lblnumorden, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtnum, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblmensj, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblimpresion, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(49, 49, 49)
-                        .addComponent(txtvfinal, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblnum, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(67, 67, 67)
-                        .addComponent(txtnumero, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnagregar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(87, 87, 87)
+                        .addComponent(btncalcular, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(160, 160, 160)
+                        .addComponent(lblmensj2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(28, 28, 28))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lbldesaprobadosex1, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+                    .addComponent(lblndesaprobados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblnaprobados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblnestudiante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblprommay, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblpromexam3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(txtnaprobados, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btngrabar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 130, Short.MAX_VALUE)
-                                .addComponent(btnmostrar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addContainerGap())))
+                            .addComponent(txtpromexam3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtmayprom, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtndesaprobados, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtndesaprobadosex1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtnestudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(76, 76, 76))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(22, 22, 22)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblnum, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtnumero, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblnumorden, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtnum, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblexam1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtexam1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(9, 9, 9)
+                        .addComponent(lblmensj, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btngrabar, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnmostrar, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblexam2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtexam2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(lblvectorinicial, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(lblvectrofinal, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblimpresion, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtvfinal, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblexam3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtexam3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnagregar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btncalcular, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(31, 31, 31)
+                        .addComponent(lblpromexam3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtpromexam3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblprommay, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtmayprom, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblnestudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtnestudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblnaprobados, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtnaprobados, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblndesaprobados, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtndesaprobados, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbldesaprobadosex1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtndesaprobadosex1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addComponent(lblmensj2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtnumeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnumeroActionPerformed
+    private void txtnumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnumActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtnumeroActionPerformed
+    }//GEN-LAST:event_txtnumActionPerformed
 
-    private void btnmostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmostrarActionPerformed
-        
-        mostrar();
-    }//GEN-LAST:event_btnmostrarActionPerformed
+    private void txtexam3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtexam3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtexam3ActionPerformed
 
-    private void btngrabarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btngrabarActionPerformed
+    private void txtexam1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtexam1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtexam1ActionPerformed
+
+    private void txtexam2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtexam2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtexam2ActionPerformed
+
+    private void btncalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncalcularActionPerformed
+        calcular();
+    }//GEN-LAST:event_btncalcularActionPerformed
+
+    private void txtmaypromActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtmaypromActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtmaypromActionPerformed
+
+    private void btnagregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnagregarActionPerformed
         try {
-            n=Integer.parseInt(txtnumero.getText());
-            grabar();
-            
+            lblmensj2.setText("");
+            agregar();
         } catch (NumberFormatException e) {
-            
+            lblmensj2.setForeground(Color.red);
+            lblmensj2.setText("Error: Ingrese datos en todos los campos");
         }
         
-        
-        
-    }//GEN-LAST:event_btngrabarActionPerformed
+    }//GEN-LAST:event_btnagregarActionPerformed
 
-    private void txtvfinalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtvfinalActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtvfinalActionPerformed
-
-    void grabar(){
-        for(int i=0;i<n;i++){
-            vector.add(aleatorio(1,50));
+    void agregar(){
+        int n,n1,n2,n3;
+        n=Integer.parseInt(txtnum.getText());
+        n1=Integer.parseInt(txtexam1.getText());
+        n2=Integer.parseInt(txtexam2.getText());
+        n3=Integer.parseInt(txtexam3.getText());
+        boolean encontrado=buscar(n);
+        lblmensj.setText("");
+        if(!encontrado){
+            estudiantes.add(new Estudiante(n, n1, n2, n3));
+            txtmayprom.setText(n2+"");
         }
-        txtainicial.setText("Numeros:\n");
-        for(Integer e: vector){
-            txtainicial.append(e+"  ");
+        else{
+            lblmensj.setForeground(Color.red);
+            lblmensj.setText("Ya existe");
         }
+        txtnum.setText("");
+        txtnum.requestFocus();
+        txtexam1.setText("");
+        txtexam1.requestFocus();
+        txtexam2.setText("");
+        txtexam2.requestFocus();
+        txtexam3.setText("");
+        txtexam3.requestFocus();
     }
     
-    void mostrar(){
-        int cont[]=new int[n];
-        for(int i=0;i<n;i++)
-            cont[i]=0;
+    void calcular(){
+        double promexam3=0,mayprom=0;
+        int aprobados=0,desaprobados=0,desaprobadosex1=0,nummayprom=0;
+        for(Estudiante e: estudiantes){
+            promexam3+=e.n3;
+            if(e.getProm()>mayprom){
+                mayprom=e.getProm();
+                nummayprom=e.getNro();
+            }  
+            if(e.getProm()>=11)
+                aprobados++;
+            if(e.getProm()<=10)
+                desaprobados++;
+            if(e.getN1()<=10)
+                desaprobadosex1++;
+        }
+        promexam3/=estudiantes.size();
         
-        for(int i=0;i<n-1;i++){
-            for(int j=i+1;j<n;j++){
-                if(vector.get(i)==vector.get(j)){
-                    cont[i]=1;
-                    cont[j]=1;
-                }
-            }
-        }
-        txtafinal.setText("Numeros:\n");
-        for(int i=0;i<n;i++){
-            if(cont[i]==0){
-                txtafinal.append(vector.get(i)+"  ");
-                acu++;
-            }
-        }
-        txtvfinal.setText(" "+acu); 
-        acu=0;
+        
+        txtpromexam3.setText(" "+promexam3);
+        txtmayprom.setText(" "+mayprom);
+        txtnestudiante.setText(" "+nummayprom);
+        txtnaprobados.setText(" "+aprobados);
+        txtndesaprobados.setText(" "+desaprobados);
+        txtndesaprobadosex1.setText(" "+desaprobadosex1);
+        
+        
     }
     
-    int aleatorio(int min,int max){
-        return (int)((max-min+1)*Math.random()+min);
+    boolean buscar(int n){
+        boolean encontrado=false;
+        for(Estudiante e: estudiantes){
+            if(e.getNro()==n)
+                encontrado=true;
+        }
+        
+        return encontrado;
     }
+    
     /**
      * @param args the command line arguments
      */
@@ -225,22 +425,6 @@ public class ejercicio04 extends javax.swing.JFrame {
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ejercicio04.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ejercicio04.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ejercicio04.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ejercicio04.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
         //</editor-fold>
 
         /* Create and display the form */
@@ -252,17 +436,30 @@ public class ejercicio04 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btngrabar;
-    private javax.swing.JButton btnmostrar;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JLabel lblimpresion;
-    private javax.swing.JLabel lblnum;
-    private javax.swing.JLabel lblvectorinicial;
-    private javax.swing.JLabel lblvectrofinal;
-    private javax.swing.JTextArea txtafinal;
-    private javax.swing.JTextArea txtainicial;
-    private javax.swing.JTextField txtnumero;
-    private javax.swing.JTextField txtvfinal;
+    private javax.swing.JButton btnagregar;
+    private javax.swing.JButton btncalcular;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JLabel lbldesaprobadosex1;
+    private javax.swing.JLabel lblexam1;
+    private javax.swing.JLabel lblexam2;
+    private javax.swing.JLabel lblexam3;
+    private javax.swing.JLabel lblmensj;
+    private javax.swing.JLabel lblmensj2;
+    private javax.swing.JLabel lblnaprobados;
+    private javax.swing.JLabel lblndesaprobados;
+    private javax.swing.JLabel lblnestudiante;
+    private javax.swing.JLabel lblnumorden;
+    private javax.swing.JLabel lblpromexam3;
+    private javax.swing.JLabel lblprommay;
+    private javax.swing.JTextField txtexam1;
+    private javax.swing.JTextField txtexam2;
+    private javax.swing.JTextField txtexam3;
+    private javax.swing.JTextField txtmayprom;
+    private javax.swing.JTextField txtnaprobados;
+    private javax.swing.JTextField txtndesaprobados;
+    private javax.swing.JTextField txtndesaprobadosex1;
+    private javax.swing.JTextField txtnestudiante;
+    private javax.swing.JTextField txtnum;
+    private javax.swing.JTextField txtpromexam3;
     // End of variables declaration//GEN-END:variables
 }

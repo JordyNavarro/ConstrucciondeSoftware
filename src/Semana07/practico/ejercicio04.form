@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.JTextField" name="jTextField3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jTextField3"/>
+      </Properties>
+    </Component>
+  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="resizable" type="boolean" value="false"/>
@@ -24,155 +31,284 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lblvectorinicial" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                  <Component id="lblvectrofinal" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="lblexam3" min="-2" pref="100" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                              <Component id="txtexam3" min="-2" pref="40" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="lblexam2" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                                      <Component id="lblexam1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="txtexam1" alignment="1" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <Component id="txtexam2" alignment="1" min="-2" pref="40" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Component id="lblnumorden" min="-2" pref="200" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="72" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="txtnum" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="lblmensj" min="-2" pref="100" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="btnagregar" min="-2" pref="100" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
+                      <Component id="btncalcular" min="-2" pref="100" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="160" max="-2" attributes="0"/>
+                      <Component id="lblmensj2" max="32767" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="lblnum" min="-2" pref="100" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
-                      <Component id="txtnumero" min="-2" pref="40" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="lblimpresion" min="-2" pref="100" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-                              <Component id="txtvfinal" min="-2" pref="30" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                          <Component id="jScrollPane1" alignment="1" max="32767" attributes="0"/>
-                          <Component id="jScrollPane2" alignment="1" max="32767" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="btngrabar" min="-2" pref="100" max="-2" attributes="0"/>
-                              <EmptySpace pref="130" max="32767" attributes="0"/>
-                              <Component id="btnmostrar" min="-2" pref="100" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                  </Group>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="lbldesaprobadosex1" alignment="0" pref="160" max="32767" attributes="0"/>
+                  <Component id="lblndesaprobados" alignment="0" max="32767" attributes="0"/>
+                  <Component id="lblnaprobados" alignment="0" max="32767" attributes="0"/>
+                  <Component id="lblnestudiante" alignment="0" max="32767" attributes="0"/>
+                  <Component id="lblprommay" alignment="0" max="32767" attributes="0"/>
+                  <Component id="lblpromexam3" alignment="0" max="32767" attributes="0"/>
               </Group>
+              <EmptySpace max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="txtnaprobados" min="-2" pref="40" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="txtpromexam3" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="txtmayprom" min="-2" pref="40" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="txtndesaprobados" alignment="1" min="-2" pref="40" max="-2" attributes="0"/>
+                      <Component id="txtndesaprobadosex1" alignment="1" min="-2" pref="40" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="txtnestudiante" min="-2" pref="40" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblnum" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="txtnumero" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                  <Component id="lblnumorden" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                  <Component id="txtnum" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+              </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblexam1" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="txtexam1" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                      <Component id="lblmensj" min="-2" pref="20" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btngrabar" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="btnmostrar" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                  <Component id="lblexam2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                  <Component id="txtexam2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="lblvectorinicial" min="-2" pref="25" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jScrollPane1" min="-2" pref="145" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="lblvectrofinal" min="-2" pref="25" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jScrollPane2" min="-2" pref="145" max="-2" attributes="0"/>
-              <EmptySpace pref="16" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblimpresion" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="txtvfinal" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                  <Component id="lblexam3" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                  <Component id="txtexam3" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
               </Group>
+              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="btnagregar" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="btncalcular" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                      <Component id="lblpromexam3" min="-2" pref="25" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="txtpromexam3" min="-2" pref="25" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblprommay" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                  <Component id="txtmayprom" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblnestudiante" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                  <Component id="txtnestudiante" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblnaprobados" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                  <Component id="txtnaprobados" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblndesaprobados" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                  <Component id="txtndesaprobados" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lbldesaprobadosex1" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                  <Component id="txtndesaprobadosex1" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="22" max="32767" attributes="0"/>
+              <Component id="lblmensj2" min="-2" pref="20" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="lblnum">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Ingresar Numero:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="txtnumero">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtnumeroActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="btngrabar">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Grabar"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btngrabarActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="btnmostrar">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Mostrar"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnmostrarActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblvectorinicial">
+    <Component class="javax.swing.JLabel" name="lblnumorden">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="Vector Inicial"/>
+        <Property name="text" type="java.lang.String" value="Numero de Orden del Estudiante:  "/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblvectrofinal">
+    <Component class="javax.swing.JTextField" name="txtnum">
       <Properties>
-        <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="Vextor Final"/>
+        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+          <Color id="Cursor de Texto"/>
+        </Property>
       </Properties>
-    </Component>
-    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
-      <AuxValues>
-        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-      </AuxValues>
-
-      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-      <SubComponents>
-        <Component class="javax.swing.JTextArea" name="txtainicial">
-          <Properties>
-            <Property name="columns" type="int" value="20"/>
-            <Property name="rows" type="int" value="5"/>
-          </Properties>
-        </Component>
-      </SubComponents>
-    </Container>
-    <Container class="javax.swing.JScrollPane" name="jScrollPane2">
-      <AuxValues>
-        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-      </AuxValues>
-
-      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-      <SubComponents>
-        <Component class="javax.swing.JTextArea" name="txtafinal">
-          <Properties>
-            <Property name="columns" type="int" value="20"/>
-            <Property name="rows" type="int" value="5"/>
-          </Properties>
-        </Component>
-      </SubComponents>
-    </Container>
-    <Component class="javax.swing.JLabel" name="lblimpresion">
-      <Properties>
-        <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="Impresion Final:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="txtvfinal">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtvfinalActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtnumActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblexam1">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Examen 1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblexam2">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Examen 2"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblexam3">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Examen 3"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtexam1">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtexam1ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtexam2">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtexam2ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtexam3">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtexam3ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnagregar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Agregar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnagregarActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btncalcular">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Calcular"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btncalcularActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblpromexam3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Promedio del aula examen 3"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblprommay">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Mayor promedio"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblnestudiante">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Numero de Estudiante"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblnaprobados">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Numero de Aprobados"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblndesaprobados">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Numero de Desaprobados"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbldesaprobadosex1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Numero Desaprobados Examen 1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtpromexam3">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtmayprom">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtmaypromActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtnestudiante">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtnaprobados">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtndesaprobados">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtndesaprobadosex1">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblmensj">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblmensj2">
     </Component>
   </SubComponents>
 </Form>

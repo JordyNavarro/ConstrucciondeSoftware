@@ -5,7 +5,6 @@
  */
 package Semana07.practico;
 
-import java.awt.Color;
 import java.util.ArrayList;
 
 /**
@@ -13,67 +12,45 @@ import java.util.ArrayList;
  * @author H´P
  */
 
-class Estudiante{
-    int nro;
-    int n1,n2,n3;
-    double prom;
-    
-    public Estudiante(int nro,int n1,int n2,int n3){
-        this.nro=nro;
-        this.n1=n1;
-        this.n2=n2;
-        this.n3=n3;
-        this.prom=(double)(n1+n2+n3)/3;
+class Produccion{
+    String mes;
+    float costodulces;
+    float costobebidas;
+    float costoconcervas;
+    public Produccion(String mes){
+        this.mes=mes;
     }
 
-    public int getNro() {
-        return nro;
+    public float getCostodulces() {
+        return costodulces;
     }
 
-    public void setNro(int nro) {
-        this.nro = nro;
+    public void setCostodulces(float costodulces) {
+        this.costodulces = costodulces;
     }
 
-    public int getN1() {
-        return n1;
+    public float getCostobebidas() {
+        return costobebidas;
     }
 
-    public void setN1(int n1) {
-        this.n1 = n1;
+    public void setCostobebidas(float costobebidas) {
+        this.costobebidas = costobebidas;
     }
 
-    public int getN2() {
-        return n2;
+    public float getCostoconcervas() {
+        return costoconcervas;
     }
 
-    public void setN2(int n2) {
-        this.n2 = n2;
+    public void setCostoconcervas(float costoconcervas) {
+        this.costoconcervas = costoconcervas;
     }
-
-    public int getN3() {
-        return n3;
-    }
-
-    public void setN3(int n3) {
-        this.n3 = n3;
-    }
-
-    public double getProm() {
-        return prom;
-    }
-
-    public void setProm(double prom) {
-        this.prom = prom;
-    }
-    
     
 }
-
 public class ejercicio05 extends javax.swing.JFrame {
+    ArrayList<Produccion>produccion=new ArrayList<>();
 
-    ArrayList<Estudiante>estudiantes=new ArrayList<>();
-    
     public ejercicio05() {
+        inicializar();
         initComponents();
         this.setLocationRelativeTo(this);
     }
@@ -87,80 +64,49 @@ public class ejercicio05 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextField3 = new javax.swing.JTextField();
-        lblnumorden = new javax.swing.JLabel();
-        txtnum = new javax.swing.JTextField();
-        lblexam1 = new javax.swing.JLabel();
-        lblexam2 = new javax.swing.JLabel();
-        lblexam3 = new javax.swing.JLabel();
-        txtexam1 = new javax.swing.JTextField();
-        txtexam2 = new javax.swing.JTextField();
-        txtexam3 = new javax.swing.JTextField();
-        btnagregar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jTextField8 = new javax.swing.JTextField();
+        lblmes = new javax.swing.JLabel();
+        lbldulces = new javax.swing.JLabel();
+        lblbebidas = new javax.swing.JLabel();
+        lblconservas = new javax.swing.JLabel();
+        btngrabar = new javax.swing.JButton();
         btncalcular = new javax.swing.JButton();
-        lblpromexam3 = new javax.swing.JLabel();
-        lblprommay = new javax.swing.JLabel();
-        lblnestudiante = new javax.swing.JLabel();
-        lblnaprobados = new javax.swing.JLabel();
-        lblndesaprobados = new javax.swing.JLabel();
-        lbldesaprobadosex1 = new javax.swing.JLabel();
-        txtpromexam3 = new javax.swing.JTextField();
-        txtmayprom = new javax.swing.JTextField();
-        txtnestudiante = new javax.swing.JTextField();
-        txtnaprobados = new javax.swing.JTextField();
-        txtndesaprobados = new javax.swing.JTextField();
-        txtndesaprobadosex1 = new javax.swing.JTextField();
-        lblmensj = new javax.swing.JLabel();
-        lblmensj2 = new javax.swing.JLabel();
+        lblmesmayprod = new javax.swing.JLabel();
+        lblpromanualcosto = new javax.swing.JLabel();
+        lblmesmenor = new javax.swing.JLabel();
+        lbldepmenorprod = new javax.swing.JLabel();
+        txtdulces = new javax.swing.JTextField();
+        txtbebidas = new javax.swing.JTextField();
+        txtconservas = new javax.swing.JTextField();
+        txtmesmay = new javax.swing.JTextField();
+        txtpromprod = new javax.swing.JTextField();
+        txtmesmenor = new javax.swing.JTextField();
+        txtdepmenorprod = new javax.swing.JTextField();
+        jboxmes = new javax.swing.JComboBox<>();
 
-        jTextField3.setText("jTextField3");
+        jLabel1.setText("jLabel1");
+
+        jLabel2.setText("jLabel2");
+
+        jTextField8.setText("jTextField8");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
-        lblnumorden.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblnumorden.setText("Numero de Orden del Estudiante:  ");
+        lblmes.setText("Mes");
 
-        txtnum.setCaretPosition(0);
-        txtnum.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        txtnum.setPreferredSize(new java.awt.Dimension(6, 20));
-        txtnum.addActionListener(new java.awt.event.ActionListener() {
+        lbldulces.setText("Dulces");
+
+        lblbebidas.setText("Bebidas");
+
+        lblconservas.setText("Conservas");
+
+        btngrabar.setText("Grabar");
+        btngrabar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtnumActionPerformed(evt);
-            }
-        });
-
-        lblexam1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblexam1.setText("Examen 1");
-
-        lblexam2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblexam2.setText("Examen 2");
-
-        lblexam3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblexam3.setText("Examen 3");
-
-        txtexam1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtexam1ActionPerformed(evt);
-            }
-        });
-
-        txtexam2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtexam2ActionPerformed(evt);
-            }
-        });
-
-        txtexam3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtexam3ActionPerformed(evt);
-            }
-        });
-
-        btnagregar.setText("Agregar");
-        btnagregar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnagregarActionPerformed(evt);
+                btngrabarActionPerformed(evt);
             }
         });
 
@@ -171,253 +117,164 @@ public class ejercicio05 extends javax.swing.JFrame {
             }
         });
 
-        lblpromexam3.setText("Promedio del aula examen 3");
+        lblmesmayprod.setText("Mes de mayor produccion de dulces");
 
-        lblprommay.setText("Mayor promedio");
+        lblpromanualcosto.setText("Promedio anual de los costos de produccion");
 
-        lblnestudiante.setText("Numero de Estudiante");
+        lblmesmenor.setText("Mes con menor registro en costo de P. Bebidas");
 
-        lblnaprobados.setText("Numero de Aprobados");
+        lbldepmenorprod.setText("Departamento de menor produccion en agosto");
 
-        lblndesaprobados.setText("Numero de Desaprobados");
-
-        lbldesaprobadosex1.setText("Numero Desaprobados Examen 1");
-
-        txtpromexam3.setEditable(false);
-
-        txtmayprom.setEditable(false);
-        txtmayprom.addActionListener(new java.awt.event.ActionListener() {
+        txtmesmay.setEditable(false);
+        txtmesmay.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtmaypromActionPerformed(evt);
+                txtmesmayActionPerformed(evt);
             }
         });
 
-        txtnestudiante.setEditable(false);
+        txtpromprod.setEditable(false);
 
-        txtnaprobados.setEditable(false);
+        txtmesmenor.setEditable(false);
 
-        txtndesaprobados.setEditable(false);
+        txtdepmenorprod.setEditable(false);
 
-        txtndesaprobadosex1.setEditable(false);
+        jboxmes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" }));
+        jboxmes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jboxmesActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
+                .addGap(28, 28, 28)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btngrabar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(lblmes, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblbebidas, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbldulces, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblconservas, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblexam3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(60, 60, 60)
-                                .addComponent(txtexam3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lblexam2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(lblexam1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(txtexam1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtexam2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addComponent(lblnumorden, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtnum, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblmensj, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(txtdulces, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtbebidas, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtconservas, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnagregar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(87, 87, 87)
-                        .addComponent(btncalcular, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(160, 160, 160)
-                        .addComponent(lblmensj2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(28, 28, 28))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lbldesaprobadosex1, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
-                    .addComponent(lblndesaprobados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblnaprobados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblnestudiante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblprommay, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblpromexam3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(txtnaprobados, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(74, 74, 74)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtpromexam3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtmayprom, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(txtndesaprobados, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txtndesaprobadosex1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(txtnestudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(76, 76, 76))
+                            .addComponent(jboxmes, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btncalcular, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(81, 81, 81))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblmesmayprod, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblpromanualcosto, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtmesmay, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtpromprod, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblmesmenor, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbldepmenorprod, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtdepmenorprod)
+                            .addComponent(txtmesmenor, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblnumorden, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtnum, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblmes, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jboxmes, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtdulces, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblexam1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtexam1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtbebidas, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(9, 9, 9)
-                        .addComponent(lblmensj, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(43, 43, 43)
+                        .addComponent(lbldulces, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblbebidas, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblconservas, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtconservas, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(38, 38, 38)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btngrabar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btncalcular, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(50, 50, 50)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblmesmayprod, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtmesmay, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblexam2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtexam2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblpromanualcosto, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtpromprod, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblexam3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtexam3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnagregar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btncalcular, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(31, 31, 31)
-                        .addComponent(lblpromexam3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(txtpromexam3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblprommay, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtmayprom, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblmesmenor, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtmesmenor, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblnestudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtnestudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblnaprobados, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtnaprobados, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblndesaprobados, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtndesaprobados, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbldesaprobadosex1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtndesaprobadosex1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
-                .addComponent(lblmensj2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                    .addComponent(lbldepmenorprod, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtdepmenorprod, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(63, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtnumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnumActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtnumActionPerformed
-
-    private void txtexam3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtexam3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtexam3ActionPerformed
-
-    private void txtexam1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtexam1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtexam1ActionPerformed
-
-    private void txtexam2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtexam2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtexam2ActionPerformed
+    private void btngrabarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btngrabarActionPerformed
+        agregar();
+        
+    }//GEN-LAST:event_btngrabarActionPerformed
 
     private void btncalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncalcularActionPerformed
-        calcular();
+        // TODO add your handling code here:
     }//GEN-LAST:event_btncalcularActionPerformed
 
-    private void txtmaypromActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtmaypromActionPerformed
+    private void txtmesmayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtmesmayActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtmaypromActionPerformed
+    }//GEN-LAST:event_txtmesmayActionPerformed
 
-    private void btnagregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnagregarActionPerformed
-        try {
-            lblmensj2.setText("");
-            agregar();
-        } catch (NumberFormatException e) {
-            lblmensj2.setForeground(Color.red);
-            lblmensj2.setText("Error: Ingrese datos en todos los campos");
-        }
+    private void jboxmesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jboxmesActionPerformed
         
-    }//GEN-LAST:event_btnagregarActionPerformed
+    }//GEN-LAST:event_jboxmesActionPerformed
 
     void agregar(){
-        int n,n1,n2,n3;
-        n=Integer.parseInt(txtnum.getText());
-        n1=Integer.parseInt(txtexam1.getText());
-        n2=Integer.parseInt(txtexam2.getText());
-        n3=Integer.parseInt(txtexam3.getText());
-        boolean encontrado=buscar(n);
-        lblmensj.setText("");
-        if(!encontrado){
-            estudiantes.add(new Estudiante(n, n1, n2, n3));
-            txtmayprom.setText(n2+"");
-        }
-        else{
-            lblmensj.setForeground(Color.red);
-            lblmensj.setText("Ya existe");
-        }
-        txtnum.setText("");
-        txtnum.requestFocus();
-        txtexam1.setText("");
-        txtexam1.requestFocus();
-        txtexam2.setText("");
-        txtexam2.requestFocus();
-        txtexam3.setText("");
-        txtexam3.requestFocus();
+        produccion.get(jboxmes.getSelectedIndex()).setCostodulces(Float.valueOf(txtdulces.getText()));
     }
     
-    void calcular(){
-        double promexam3=0,mayprom=0;
-        int aprobados=0,desaprobados=0,desaprobadosex1=0,nummayprom=0;
-        for(Estudiante e: estudiantes){
-            promexam3+=e.n3;
-            if(e.getProm()>mayprom){
-                mayprom=e.getProm();
-                nummayprom=e.getNro();
-            }  
-            if(e.getProm()>=11)
-                aprobados++;
-            if(e.getProm()<=10)
-                desaprobados++;
-            if(e.getN1()<=10)
-                desaprobadosex1++;
-        }
-        promexam3/=estudiantes.size();
-        
-        
-        txtpromexam3.setText(" "+promexam3);
-        txtmayprom.setText(" "+mayprom);
-        txtnestudiante.setText(" "+nummayprom);
-        txtnaprobados.setText(" "+aprobados);
-        txtndesaprobados.setText(" "+desaprobados);
-        txtndesaprobadosex1.setText(" "+desaprobadosex1);
-        
-        
+    void inicializar(){
+        produccion.add(new Produccion("Enero"));
+        produccion.add(new Produccion("Febrero"));
+        produccion.add(new Produccion("Marzo"));
+        produccion.add(new Produccion("Abril"));
+        produccion.add(new Produccion("Mayo"));
+        produccion.add(new Produccion("Junio"));
+        produccion.add(new Produccion("Julio"));
+        produccion.add(new Produccion("Agosto"));
+        produccion.add(new Produccion("Setiembre"));
+        produccion.add(new Produccion("Octubre"));
+        produccion.add(new Produccion("Noviembre"));
+        produccion.add(new Produccion("Diciembre"));
     }
-    
-    boolean buscar(int n){
-        boolean encontrado=false;
-        for(Estudiante e: estudiantes){
-            if(e.getNro()==n)
-                encontrado=true;
-        }
-        
-        return encontrado;
-    }
-    
     /**
      * @param args the command line arguments
      */
@@ -427,6 +284,23 @@ public class ejercicio05 extends javax.swing.JFrame {
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(ejercicio05.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(ejercicio05.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(ejercicio05.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(ejercicio05.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
@@ -438,30 +312,26 @@ public class ejercicio05 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnagregar;
     private javax.swing.JButton btncalcular;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JLabel lbldesaprobadosex1;
-    private javax.swing.JLabel lblexam1;
-    private javax.swing.JLabel lblexam2;
-    private javax.swing.JLabel lblexam3;
-    private javax.swing.JLabel lblmensj;
-    private javax.swing.JLabel lblmensj2;
-    private javax.swing.JLabel lblnaprobados;
-    private javax.swing.JLabel lblndesaprobados;
-    private javax.swing.JLabel lblnestudiante;
-    private javax.swing.JLabel lblnumorden;
-    private javax.swing.JLabel lblpromexam3;
-    private javax.swing.JLabel lblprommay;
-    private javax.swing.JTextField txtexam1;
-    private javax.swing.JTextField txtexam2;
-    private javax.swing.JTextField txtexam3;
-    private javax.swing.JTextField txtmayprom;
-    private javax.swing.JTextField txtnaprobados;
-    private javax.swing.JTextField txtndesaprobados;
-    private javax.swing.JTextField txtndesaprobadosex1;
-    private javax.swing.JTextField txtnestudiante;
-    private javax.swing.JTextField txtnum;
-    private javax.swing.JTextField txtpromexam3;
+    private javax.swing.JButton btngrabar;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JTextField jTextField8;
+    private javax.swing.JComboBox<String> jboxmes;
+    private javax.swing.JLabel lblbebidas;
+    private javax.swing.JLabel lblconservas;
+    private javax.swing.JLabel lbldepmenorprod;
+    private javax.swing.JLabel lbldulces;
+    private javax.swing.JLabel lblmes;
+    private javax.swing.JLabel lblmesmayprod;
+    private javax.swing.JLabel lblmesmenor;
+    private javax.swing.JLabel lblpromanualcosto;
+    private javax.swing.JTextField txtbebidas;
+    private javax.swing.JTextField txtconservas;
+    private javax.swing.JTextField txtdepmenorprod;
+    private javax.swing.JTextField txtdulces;
+    private javax.swing.JTextField txtmesmay;
+    private javax.swing.JTextField txtmesmenor;
+    private javax.swing.JTextField txtpromprod;
     // End of variables declaration//GEN-END:variables
 }

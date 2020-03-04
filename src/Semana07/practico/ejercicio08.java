@@ -13,12 +13,8 @@ import java.util.ArrayList;
  */
 public class ejercicio08 extends javax.swing.JFrame {
 
-    ArrayList<Integer>vectorA= new ArrayList<>();
-    ArrayList<Integer>vectorB= new ArrayList<>();
-    ArrayList<Integer>vectorC= new ArrayList<>();
-    
+    ArrayList<Integer>vector= new ArrayList<>();
     public ejercicio08() {
-        
         initComponents();
         this.setLocationRelativeTo(this);
     }
@@ -32,38 +28,30 @@ public class ejercicio08 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblvectorA = new javax.swing.JLabel();
-        lblvectorB = new javax.swing.JLabel();
-        txtvectorA = new javax.swing.JTextField();
-        txtvectorB = new javax.swing.JTextField();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        lblnum = new javax.swing.JLabel();
+        txtnum = new javax.swing.JTextField();
         btngrabar = new javax.swing.JButton();
-        btnmostrar = new javax.swing.JButton();
-        lblmuestraA = new javax.swing.JLabel();
-        lblmuestraB = new javax.swing.JLabel();
-        lblmuestraC = new javax.swing.JLabel();
+        btnanalizar = new javax.swing.JButton();
+        lblresultante = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        txtavectorA = new javax.swing.JTextArea();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        txtavectorB = new javax.swing.JTextArea();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        txtavectorC = new javax.swing.JTextArea();
+        txtaresultante = new javax.swing.JTextArea();
+        lblanalisis = new javax.swing.JLabel();
+        txtanalisis = new javax.swing.JTextField();
+
+        jTextField1.setText("jTextField1");
+
+        jTextField2.setText("jTextField2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
-        lblvectorA.setText("Vector A");
+        lblnum.setText("Ingresar Numero");
 
-        lblvectorB.setText("Vector B");
-
-        txtvectorA.addActionListener(new java.awt.event.ActionListener() {
+        txtnum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtvectorAActionPerformed(evt);
-            }
-        });
-
-        txtvectorB.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtvectorBActionPerformed(evt);
+                txtnumActionPerformed(evt);
             }
         });
 
@@ -74,100 +62,70 @@ public class ejercicio08 extends javax.swing.JFrame {
             }
         });
 
-        btnmostrar.setText("Mostrar");
-        btnmostrar.addActionListener(new java.awt.event.ActionListener() {
+        btnanalizar.setText("Analizar");
+        btnanalizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnmostrarActionPerformed(evt);
+                btnanalizarActionPerformed(evt);
             }
         });
 
-        lblmuestraA.setText("Vector A");
+        lblresultante.setText("Vector Resultante");
 
-        lblmuestraB.setText("Vector B");
+        txtaresultante.setEditable(false);
+        txtaresultante.setColumns(20);
+        txtaresultante.setRows(5);
+        jScrollPane1.setViewportView(txtaresultante);
 
-        lblmuestraC.setText("vector C");
+        lblanalisis.setText("Analisis");
 
-        txtavectorA.setEditable(false);
-        txtavectorA.setColumns(20);
-        txtavectorA.setRows(5);
-        txtavectorA.setPreferredSize(new java.awt.Dimension(170, 94));
-        jScrollPane1.setViewportView(txtavectorA);
-
-        txtavectorB.setEditable(false);
-        txtavectorB.setColumns(20);
-        txtavectorB.setRows(5);
-        jScrollPane2.setViewportView(txtavectorB);
-
-        txtavectorC.setEditable(false);
-        txtavectorC.setColumns(20);
-        txtavectorC.setRows(5);
-        jScrollPane3.setViewportView(txtavectorC);
+        txtanalisis.setEditable(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(69, 69, 69)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btngrabar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(124, 124, 124)
-                        .addComponent(btnmostrar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(lblvectorA, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addComponent(lblanalisis, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtanalisis, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btngrabar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(txtvectorA, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(lblvectorB, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(txtvectorB, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(170, 170, 170))))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblmuestraB, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(lblmuestraA, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblmuestraC, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(btnanalizar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lblresultante, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblnum, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(69, 69, 69)
+                                .addComponent(txtnum, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(29, 29, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblvectorA, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtvectorA, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblnum, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtnum, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblvectorB, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtvectorB, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btngrabar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnmostrar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
+                    .addComponent(btnanalizar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lblresultante, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblmuestraA, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblmuestraB, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblmuestraC, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
-                    .addComponent(jScrollPane2)
-                    .addComponent(jScrollPane3))
-                .addContainerGap(24, Short.MAX_VALUE))
+                    .addComponent(lblanalisis, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtanalisis, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 22, Short.MAX_VALUE))
         );
 
         pack();
@@ -177,47 +135,48 @@ public class ejercicio08 extends javax.swing.JFrame {
         try {
             grabar();
         } catch (NumberFormatException e) {
-            
         }
         
     }//GEN-LAST:event_btngrabarActionPerformed
 
-    private void txtvectorAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtvectorAActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtvectorAActionPerformed
+    private void btnanalizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnanalizarActionPerformed
+        analizar();
+    }//GEN-LAST:event_btnanalizarActionPerformed
 
-    private void txtvectorBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtvectorBActionPerformed
+    private void txtnumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnumActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtvectorBActionPerformed
-
-    private void btnmostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmostrarActionPerformed
-        mostrar();
-    }//GEN-LAST:event_btnmostrarActionPerformed
+    }//GEN-LAST:event_txtnumActionPerformed
 
     void grabar(){
-        int n1=Integer.parseInt(txtvectorA.getText());
-        int n2=Integer.parseInt(txtvectorB.getText());
-        vectorA.add(n1);
-        vectorB.add(n2);
-        txtavectorA.append(txtvectorA.getText()+"\n");
-        txtavectorB.append(txtvectorB.getText()+"\n");
-        txtvectorA.setText("");
-        txtvectorA.requestFocus();
-        txtvectorB.setText("");
-        txtvectorB.requestFocus();
+        if(vector.size()==0)
+            txtaresultante.setText("");
+        
+        int n=Integer.parseInt(txtnum.getText());
+        vector.add(n);
+        txtnum.setText("");
+        txtnum.requestFocus();
+        txtaresultante.append(n+"\n");
     }
     
-    int aleatorio(int min,int max){
-        return (int)((max-min+1)*Math.random()+min);
-    }
+    void analizar(){
+        int cont=0;
+        for(int i=0;i<vector.size()-1;i++){
+            if(vector.get(i)<=vector.get(i+1))
+                cont=1;
+            else{
+                cont=0;
+                break;
+            }
+                
+        }
+        
+        if(cont==0)
+            txtanalisis.setText("No esta Ordenado");
+        else 
+            txtanalisis.setText("Esta Ordenado");
     
-    void mostrar(){
-        for(int i=0,j=vectorA.size()-1;i<vectorA.size();i++,j--){
-            vectorC.add(vectorA.get(i)*vectorB.get(j));
-        }
-        for(Integer e: vectorC){
-            txtavectorC.append(e+"\n");
-        }
+        vector.clear();
+        
     }
     
     /**
@@ -246,6 +205,7 @@ public class ejercicio08 extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(ejercicio08.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -256,20 +216,16 @@ public class ejercicio08 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnanalizar;
     private javax.swing.JButton btngrabar;
-    private javax.swing.JButton btnmostrar;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JLabel lblmuestraA;
-    private javax.swing.JLabel lblmuestraB;
-    private javax.swing.JLabel lblmuestraC;
-    private javax.swing.JLabel lblvectorA;
-    private javax.swing.JLabel lblvectorB;
-    private javax.swing.JTextArea txtavectorA;
-    private javax.swing.JTextArea txtavectorB;
-    private javax.swing.JTextArea txtavectorC;
-    private javax.swing.JTextField txtvectorA;
-    private javax.swing.JTextField txtvectorB;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JLabel lblanalisis;
+    private javax.swing.JLabel lblnum;
+    private javax.swing.JLabel lblresultante;
+    private javax.swing.JTextField txtanalisis;
+    private javax.swing.JTextArea txtaresultante;
+    private javax.swing.JTextField txtnum;
     // End of variables declaration//GEN-END:variables
 }
