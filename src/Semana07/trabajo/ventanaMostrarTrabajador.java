@@ -13,7 +13,7 @@ import javax.swing.JTextArea;
  */
 
 public class ventanaMostrarTrabajador extends JFrame implements ActionListener{
-    public Registro registro=new Registro();
+    public Registro registros=new Registro();
     JPanel panel;
     public JButton btnlistar,btnatras;
     JTextArea txtadatos;
@@ -52,8 +52,17 @@ public class ventanaMostrarTrabajador extends JFrame implements ActionListener{
     
     @Override
     public void actionPerformed(ActionEvent e) {
+        if(e.getSource().equals(btnatras)){
+            
+        }
         
-        
+        if(e.getSource().equals(btnlistar)){
+            txtadatos.setText("");
+            txtadatos.setText("Nombres\tApellidos\t  Dni\t Puesto\t Sueldo\n");
+            for(Trabajador i: registros.trabajadores){
+                txtadatos.append(i.datosTrabajador());
+        }
+        }
     }
     
     public static void main(String[] args) {

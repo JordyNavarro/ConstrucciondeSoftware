@@ -86,6 +86,8 @@ public class ventanaAgregarT extends JFrame implements ActionListener{
         btnmostrar.setBounds(260, 200, 80, 30);
         btnmostrar.addActionListener(this);
         panel.add(btnmostrar);
+        
+        mostrar.btnatras.addActionListener(this);
     }
     
     
@@ -108,8 +110,32 @@ public class ventanaAgregarT extends JFrame implements ActionListener{
                 txtsueldo.setText("1200");
             }
         }
-        if(e.getSource().equals(e)){
-             
+        if(e.getSource().equals(btnagregar)){
+             String nombre=txtnombre.getText();
+            String apellido=txtapellido.getText();
+            String puesto=jcpuesto.getSelectedItem().toString();
+            int dni=Integer.parseInt(txtdni.getText());
+            float sueldo=Float.valueOf(txtsueldo.getText());
+            mostrar.registros.addTrabajador(new Trabajador(nombre, apellido, dni, puesto, sueldo));
+            txtnombre.setText("");
+            txtnombre.requestFocus();
+            txtapellido.setText("");
+            txtapellido.requestFocus();
+            txtdni.setText("");
+            txtdni.requestFocus();
+            txtsueldo.setText("");
+            txtsueldo.requestFocus(); 
+        }
+        
+        if(e.getSource().equals(btnmostrar)){
+            setVisible(false);
+            mostrar.setVisible(true);
+        }
+        
+        if(e.getSource().equals(mostrar.btnatras)){
+            setVisible(true);
+            mostrar.setVisible(false);
+            mostrar.txtadatos.setText("");
         }
     }
     

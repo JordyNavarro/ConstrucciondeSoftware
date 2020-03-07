@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package SEMANA_04;
+package Semana03.practico.colecciones;
 
 import java.util.TreeSet;
 public class ejercicio2 {

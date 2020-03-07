@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package SEMANA_04;
+package Semana03.practico.colecciones;
 
 /**
 Crear la clase CuentaW que en el constructor tome como argumento una cadena de
@@ -49,20 +49,35 @@ class CuentaW{
     }
                 
     public int NumPalabras(){
-        int contPalabras = 0;        
-        for (int i = 0; i < cadena.length(); i++){
-            if(i <= cadena.length()-1){  
-                if(letrasMayus(cadena.charAt(i)) || letrasMinus(cadena.charAt(i)))                
-                    if(!letrasMayus(cadena.charAt(i-1)) && !letrasMinus(cadena.charAt(i-1)))
+        int contPalabras=1;
+       
+        int i=0;
+        while(i < cadena.length()){
+            if(Character.isLetter(cadena.charAt(i))||Character.isDigit(cadena.charAt(i))){
+                
+            }else{
+                for(int j=i;j<cadena.length()-1;j++){
+                    i++;
+                    if(Character.isLetter(cadena.charAt(i))||Character.isDigit(cadena.charAt(i))){
                         contPalabras++;
-            }            
+                        break;
+                    }
+                        
+                }
+            }
+            i++;
+            
+                /*if(letrasMayus(cadena.charAt(i)) || letrasMinus(cadena.charAt(i)))                
+                    if(!letrasMayus(cadena.charAt(i)) && !letrasMinus(cadena.charAt(i)))
+                        contPalabras++;*/
+                       
         }            
         return contPalabras;
     }     
 }
 public class ejercicio3 {
     public static void main(String[] args) {
-        CuentaW c = new CuentaW("Raquela q");
+        CuentaW c = new CuentaW("jordy navarro");
         System.out.println("Numero de letras que hay : "+c.NumLetras());
         System.out.println("Numero de palabras que hay : "+c.NumPalabras());
     }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Semana03.Trabajos;
+package Semana03.practico.colecciones;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -51,16 +51,16 @@ public class ejercicio6 {
             System.out.println(e.getPalabra());
         }
 
-        System.out.println("************* mostrar lista de una determinada longitud ******************");
+        System.out.println("Mostrar lista de una determinada longitud:");
         System.out.println("ingrese indice");
         int x = sc.nextInt();
-
-        for (int i = 0; i < lista.size() + i; i++) {
-            if (x == -1) {
+        int con=lista.size();
+        for (int i = 0; i<con; i++) {
+            lista.remove(lista.size()-1);
+            if (lista.size()==x) {
                 break;
-            }
-            lista.remove(x--);
-
+            }  
+            //System.out.println(lista.get(i).getPalabra());
         }
         Collections.sort(lista, new Comparator<palabra>() {
             public int compare(palabra p1, palabra p2) {
