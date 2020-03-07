@@ -1,4 +1,4 @@
-package Semana08.practica1;
+    package Semana08.practica1;
 
 import javax.swing.*;
 import java.awt.*;

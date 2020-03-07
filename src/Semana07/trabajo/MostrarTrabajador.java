@@ -11,7 +11,6 @@ package Semana07.trabajo;
  */
 public class MostrarTrabajador extends javax.swing.JFrame {
     public Registro registro= new Registro();
-    public boolean visible=true;
     public MostrarTrabajador() {
         initComponents();
         setLocationRelativeTo(this);
