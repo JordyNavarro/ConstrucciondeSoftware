@@ -58,7 +58,7 @@ public class ventanaMostrarTrabajador extends JFrame implements ActionListener{
         
         if(e.getSource().equals(btnlistar)){
             txtadatos.setText("");
-            txtadatos.setText("Nombres\tApellidos\t  Dni\t Puesto\t Sueldo\n");
+            txtadatos.setText("Nombres\tApellidos\t  Dni\t  Puesto\t  Sueldo\n");
             for(Trabajador i: registros.trabajadores){
                 txtadatos.append(i.datosTrabajador());
         }

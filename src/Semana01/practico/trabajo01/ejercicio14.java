@@ -7,7 +7,7 @@ import java.util.Scanner;
  * @author H´P
  */
 public class ejercicio14 {
-    public static void main(String[] args) {
+    public static int main(String[] args) {
         Scanner leer= new Scanner(System.in);
         System.out.println("Ingrese el numero de alumnos que va registrar: ");
         int n=leer.nextInt();
@@ -35,5 +35,8 @@ public class ejercicio14 {
         }
         System.out.println("Cantidad de hombres: "+hombres);
         System.out.println("Cantidad de mujeres: "+mujeres);
+        
+        return hombres+mujeres;
     }
+    
 }
